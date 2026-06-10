@@ -18,31 +18,6 @@ vim.opt.rtp:prepend(lazypath)
 -- require("options")
 -- require("keymaps")
 
-local opts = {
-	defaults = {
-		lazy = true,
-	},
-	install = {
-		colorscheme = { "kanagawa" }
-	},
-	rtp = {
-		disabled_plugins = {
-			"gzip",
-			"matchit",
-			"matchparen",
-			"netrwPlugin",
-			"tarPlugin",
-			"tohtml",
-			"tutor",
-			"zipPlugin",
-		}
-	},
-	change_detection = {
-		notify = true,
-	},
-	checker = { enabled = true },
-}
-
 -- Make sure to setup `mapleader` and `maplocalleader` before
 -- loading lazy.nvim so that mappings are correct.
 -- This is also a good place to setup other settings (vim.opt)
@@ -51,6 +26,7 @@ vim.g.maplocalleader = "\\"
 
 require("options")
 require("keymaps")
+require("config.autocmds")
 
 local plugins_dir = "plugins"
 
